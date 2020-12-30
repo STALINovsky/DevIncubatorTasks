@@ -111,7 +111,7 @@ namespace Task1
                               $"{object.ReferenceEquals(secondObject, thirdObject)} ");
 
 
-            //f) 
+            //f - g) 
             //declaring variables for calculator
             byte a;
             byte b;
@@ -129,6 +129,14 @@ namespace Task1
             }
             
             Console.WriteLine($"Result of Sum = {resultOfSum}");
+
+            //h 
+            long aLong = long.MaxValue;
+            int bInt = int.MaxValue;
+            
+            aLong = bInt;// all is ok because long has larger range;
+            //bInt = aLong; that's wrong, we need to use implicit 
+            bInt = (int)aLong;// That's works
 
         }
     }
