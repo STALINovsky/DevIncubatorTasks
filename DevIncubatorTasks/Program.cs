@@ -62,15 +62,20 @@ namespace Task1
             
             //d)
             //declare variables
-            string first = "Hello";
-            string second = "Hello";
-            string third = "Hello";
+            string firstString = "Hello";
+            string secondString = "Hello";
+            string thirdString = "Hello";
             
             
             //display hash code 
-            Console.WriteLine($"{nameof(first)} = {first.GetHashCode()}," +
-                              $" {nameof(second)} = {second.GetHashCode()}," +
-                              $" {nameof(third)} = {third.GetHashCode()}");
+            Console.WriteLine($"{nameof(firstString)}.GetHashCode() = {firstString.GetHashCode()}, " +
+                              $" {nameof(secondString)}.GetHashCode() = {secondString.GetHashCode()}, " +
+                              $" {nameof(thirdString)}.GetHashCode() = {thirdString.GetHashCode()}");
+            //display values
+            Console.WriteLine($"{nameof(firstString)} = {firstString}, " +
+                              $" {nameof(secondString)} = {secondString}, " +
+                              $" {nameof(thirdString)} = {thirdString}");
+            
             // All hashes are same because all variables refer to same object
             // That's because string made by Flyweight pattern check CIL code or read MsDocs
 
@@ -80,9 +85,13 @@ namespace Task1
             int thirdNumber = 3;
             
             //display hash code
-            Console.WriteLine($"{nameof(firstNumber)} = {firstNumber.GetHashCode()}" +
-                              $"{nameof(secondNumber)} = {secondNumber.GetHashCode()}" +
-                              $"{nameof(thirdNumber)} = {thirdNumber.GetHashCode()}");
+            Console.WriteLine($"{nameof(firstNumber)}.GetHashCode() = {firstNumber.GetHashCode()}, " +
+                              $"{nameof(secondNumber)}.GetHashCode() = {secondNumber.GetHashCode()}, " +
+                              $"{nameof(thirdNumber)}.GetHashCode() = {thirdNumber.GetHashCode()}");
+            
+            Console.WriteLine($"{nameof(firstNumber)} = {firstNumber}, " +
+                              $" {nameof(secondNumber)} = {secondNumber}, " +
+                              $" {nameof(thirdNumber)} = {thirdNumber}");
             //all numbers are different and hashes are too;
 
 
