@@ -59,6 +59,42 @@ namespace Task1
             float g = float.MaxValue; //~ 3.4 x 10^38
             //check compilation error
             g = float.MaxValue + float.MaxValue; // all works, but value of g is infinity
-        }   
+            
+            //d)
+            //declare variables
+            string firstString = "Hello";
+            string secondString = "Hello";
+            string thirdString = "Hello";
+            
+            
+            //display hash code 
+            Console.WriteLine($"{nameof(firstString)}.GetHashCode() = {firstString.GetHashCode()}," +
+                              $" {nameof(secondString)}.GetHashCode() = {secondString.GetHashCode()}," +
+                              $" {nameof(thirdString)}.GetHashCode() = {thirdString.GetHashCode()}");
+            // All hashes are same because all variables refer to same object
+            // That's because string made by Flyweight pattern check CIL code or read MsDocs
+
+            //display values of variables 
+            Console.WriteLine($"{nameof(firstString)} = {firstString} " +
+                              $"{nameof(secondString)} = {secondString} " +
+                              $"{nameof(thirdString)} = {thirdString} ");
+
+            //declare number variables
+            int firstNumber = 1;
+            int secondNumber = 2;
+            int thirdNumber = 3;
+            
+            //display hash code
+            Console.WriteLine($"{nameof(firstNumber)}.GetHashCode() = {firstNumber.GetHashCode()} " +
+                              $"{nameof(secondNumber)}.GetHashCode() = {secondNumber.GetHashCode()} " +
+                              $"{nameof(thirdNumber)}.GetHashCode() = {thirdNumber.GetHashCode()} ");
+            
+            Console.WriteLine($"{nameof(firstNumber)} = {firstNumber} " +
+                              $"{nameof(secondNumber)} = {secondNumber} " +
+                              $"{nameof(thirdNumber)} = {thirdNumber}");
+            //all numbers are different and hashes are too;
+
+
+        }
     }
 }
