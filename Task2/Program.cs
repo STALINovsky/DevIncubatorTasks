@@ -15,17 +15,15 @@ namespace Task2
             while (true)
             {
                 var userAnswer = Console.ReadLine();
-                if (userAnswer == YES_ANSWER)
+                switch (userAnswer)
                 {
-                    return true;
-                }
-                else if (userAnswer == NO_ANSWER)
-                {
-                    return false;
-                }
-                else
-                {
-                    Console.WriteLine("Invalid input try again");
+                    case YES_ANSWER:
+                        return true;
+                    case NO_ANSWER:
+                        return false;
+                    default:
+                        Console.WriteLine("Invalid input try again");
+                        break;
                 }
             }
         }
@@ -43,7 +41,7 @@ namespace Task2
             string message = userAnswers switch
             {
                 { IsHomeworkDone: true, IsTeamProjectDone: true, HasUserUniversityDebt: false } => "Today you can go for a walk with friends",
-                _ => "You still have things to do you can't go out with your friends today"
+                _ => "You still have things to do, you can't go out with your friends today"
             };
 
             Console.WriteLine(message);
