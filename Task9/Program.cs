@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using Console = System.Console;
 
 namespace Task9
 {
@@ -6,7 +8,7 @@ namespace Task9
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine();
         }
     }
 }
