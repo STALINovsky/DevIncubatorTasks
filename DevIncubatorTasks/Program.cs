@@ -77,7 +77,7 @@ namespace Task1
                               $" {nameof(thirdString)} = {thirdString}");
 
             // All hashes are same because all variables refer to same object
-            // That's because string made by Flyweight pattern check CIL code or read MsDocs
+            // That's because string because strings are loaded from metadata check CIL code or read MsDocs
 
             //declare number variables
             int firstNumber = 1;
