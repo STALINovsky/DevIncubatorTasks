@@ -13,7 +13,7 @@ namespace Task14
         static int[,] CreateSquareArray(int rowsCount, int columnsCount)
         {
             var matrix = new int[rowsCount, columnsCount];
-
+            //filling matrix
             for (int i = 0; i < rowsCount; i++)
             {
                 for (int j = 0; j < columnsCount; j++)
