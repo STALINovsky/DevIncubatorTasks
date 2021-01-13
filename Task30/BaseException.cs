@@ -9,17 +9,17 @@ namespace Task30
     /// Base class for custom exception
     /// </summary>
     [Serializable]
-    public class BaseException : Exception
+    public abstract class BaseException : Exception
     {
-        public BaseException()
+        protected BaseException()
         {
         }
 
-        public BaseException(string message) : base(message)
+        protected BaseException(string message) : base(message)
         {
         }
 
-        public BaseException(string message, Exception inner) : base(message, inner)
+        protected BaseException(string message, Exception inner) : base(message, inner)
         {
         }
 
